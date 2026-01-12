@@ -8,23 +8,23 @@
                     <img src="{{ asset('assets/images/logo.png') }}" alt="Aircargoswift Global Logistics" class="footer-logo mb-4" style="height: 70px;">
                     <h4 class="mb-3">Aircargoswift Global Logistics</h4>
                     <div class="contact-details">
-                        <div class="address mb-3">
+                        {{-- <div class="address mb-3">
                             <i class="bi bi-geo-alt me-2 text-primary"></i>
                             <p class="mb-0">Level 1M, Core 2, Advanced Cargo Centre<br>
                             Kuala Lumpur International Airport<br>
                             64000 Sepang, Selangor Darul Ehsan<br>
                             Malaysia</p>
-                        </div>
+                        </div> --}}
                         <div class="contact-hours mb-3">
                             <h6 class="text-uppercase text-primary mb-2">Contact Information</h6>
                             <p class="mb-1">
                                 <i class="bi bi-envelope me-2"></i>
                                 <strong>Standard Inquiries:</strong> support@aircargoswift.com
                             </p>
-                            <p class="mb-0">
+                            {{-- <p class="mb-0">
                                 <i class="bi bi-clock me-2"></i>
                                 <strong>Emergency Operations:</strong> ops@aircargoswift.com
-                            </p>
+                            </p> --}}
                         </div>
                         {{-- <div class="emergency-contact">
                             <p class="mb-1">

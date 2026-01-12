@@ -12,10 +12,10 @@
 <section class="contact-content position-relative py-5">
     <!-- Map as background -->
     <div class="map-background position-absolute top-0 start-0 w-100 h-100" style="z-index: -1;">
-        <iframe 
+        {{-- <iframe 
             src="https://www.google.com/maps?q=Kuala%20Lumpur%20International%20Airport&output=embed" 
             width="100%" height="100%" style="border:0; filter: brightness(0.6);" loading="lazy">
-        </iframe>
+        </iframe> --}}
     </div>
 
     <div class="container">

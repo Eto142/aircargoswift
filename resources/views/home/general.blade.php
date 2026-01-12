@@ -18,7 +18,7 @@
                 <h2>What is General Cargo?</h2>
                 <p>
                     General cargo refers to standard commercial goods that do not require special handling conditions
-                    such as temperature control or hazardous material procedures. Arkargo ensures these shipments are
+                    such as temperature control or hazardous material procedures. Aircargoswift ensures these shipments are
                     transported safely, efficiently, and on schedule across global destinations.
                 </p>
                 <p>
@@ -37,7 +37,7 @@
 <section class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2>Why Choose Arkargo for General Cargo?</h2>
+            <h2>Why Choose Aircargoswift for General Cargo?</h2>
             <p class="text-muted">Trusted logistics expertise with global reach</p>
         </div>
         <div class="row g-4">

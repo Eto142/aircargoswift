@@ -1,11 +1,10 @@
 {{-- resources/views/contact.blade.php --}}
 @include('home.header')
-
 <!-- Contact Hero -->
 <section class="contact-hero py-5 bg-dark text-white">
     <div class="container">
         <h1 class="mb-2">Contact Us</h1>
-        <p class="mb-0">We’re here to help with bookings, tracking, and general enquiries.</p>
+        <p class="mb-0">Connect with our team for all your cargo and logistics needs.</p>
     </div>
 </section>
 

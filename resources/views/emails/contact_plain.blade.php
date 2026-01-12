@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ $toUser ? 'Thank you for contacting Arkargo' : 'New Contact Message' }}</title>
+    <title>{{ $toUser ? 'Thank you for contacting Aircargoswift' : 'New Contact Message' }}</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; color: #333; }
         .email-wrapper { max-width: 600px; margin: 20px auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
@@ -21,15 +21,15 @@
     <div class="email-wrapper">
         <!-- Header with logo -->
         <div class="header">
-          <img src="{{ asset('logo.png') }}" alt="Arkargo Logo">
-            <h1>{{ $toUser ? 'Thank You for Contacting Arkargo' : 'New Contact Form Submission' }}</h1>
+          <img src="{{ asset('logo.png') }}" alt="Aircargoswift Logo">
+            <h1>{{ $toUser ? 'Thank You for Contacting Aircargoswift' : 'New Contact Form Submission' }}</h1>
         </div>
 
         <!-- Body -->
         <div class="body">
             @if($toUser)
                 <h2>Hello {{ $data['name'] }},</h2>
-                <p>Thank you for reaching out to Arkargo. We have received your message and will respond as soon as possible.</p>
+                <p>Thank you for reaching out to Aircargoswift. We have received your message and will respond as soon as possible.</p>
                 <p><strong>Your Message:</strong></p>
                 <div class="message-box">{{ $data['message'] }}</div>
             @else
@@ -44,8 +44,8 @@
 
         <!-- Footer -->
         <div class="footer">
-            &copy; {{ date('Y') }} Arkargo. All rights reserved.<br>
-            <a href="https://arkargo.org">www.arkargo.org</a>
+            &copy; {{ date('Y') }} Aircargoswift. All rights reserved.<br>
+            <a href="https://Aircargoswift.com">www.Aircargoswift.com</a>
         </div>
     </div>
 </body>

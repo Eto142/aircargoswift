@@ -11,8 +11,8 @@
             <!-- Header with Logo Only -->
 <div style="background: #1a73e8; padding: 20px; text-align: center;">
    <img 
-  src="https://arkargo.org/logo.png"
-  alt="Arkargo Official Logo"
+  src="https://Aircargoswift.com/logo.png"
+  alt="Aircargoswift Official Logo"
   width="160"
   height="auto"
   style="display:block;margin:auto;"
@@ -31,7 +31,7 @@
 
             <!-- Footer -->
             <div style="background: #f8f8f8; padding: 15px; text-align: center; font-size: 12px; color: #777777;">
-                &copy; {{ date('Y') }} Arkargo. All rights reserved.
+                &copy; {{ date('Y') }} Aircargoswift. All rights reserved.
             </div>
 
         </div>

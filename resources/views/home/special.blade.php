@@ -18,7 +18,7 @@
                 <h2>What is Special Cargo?</h2>
                 <p>
                     Special cargo includes shipments that require enhanced handling, documentation, or specific
-                    transport conditions due to their nature, value, or regulatory requirements. Arkargo provides
+                    transport conditions due to their nature, value, or regulatory requirements. Aircargoswift provides
                     specialized logistics solutions to ensure safety, compliance, and reliability.
                 </p>
                 <p>
@@ -81,11 +81,11 @@
     </div>
 </section>
 
-<!-- Why Arkargo -->
+<!-- Why Aircargoswift -->
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2>Why Choose Arkargo for Special Cargo?</h2>
+            <h2>Why Choose Aircargoswift for Special Cargo?</h2>
         </div>
         <div class="row g-4">
             <div class="col-md-4">
@@ -147,7 +147,7 @@
 <section class="py-5">
     <div class="container text-center">
         <h3>Need Expert Handling for Special Cargo?</h3>
-        <p>Trust Arkargo to manage your most sensitive shipments with care and precision.</p>
+        <p>Trust Aircargoswift to manage your most sensitive shipments with care and precision.</p>
         <a href="{{ url('contact') }}" class="btn btn-dark me-2">Contact Us</a>
         <a href="{{ url('/') }}#book-cargo" class="btn btn-outline-dark">Request a Quote</a>
     </div>

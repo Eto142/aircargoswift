@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Arkargo</title>
+    <title>Home - Aircargoswift</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -630,14 +630,14 @@
     <!-- Notification Banner -->
     <div class="notification-banner">
         <i class="bi bi-bell"></i>
-        <span>TEMPORARY EMBARGO RESTRICTION TO LHR LIFTED, EFFECTIVELY IMMEDIATELY</span>
+        <span>SERVICE RESUMED: Shipments to LHR may proceed without restriction as of now</span>
     </div>
     
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Arkargo Logo">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="Aircargoswift Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>

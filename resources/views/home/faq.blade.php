@@ -5,7 +5,7 @@
 <section class="py-5 bg-dark text-white">
     <div class="container">
         <h1 class="mb-2">Frequently Asked Questions</h1>
-        <p class="mb-0">Find quick answers to common questions about Arkargo services.</p>
+        <p class="mb-0">Find quick answers to common questions about Aircargoswift services.</p>
     </div>
 </section>
 
@@ -48,7 +48,7 @@
                     <div class="accordion-item mb-3">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                What types of cargo does Arkargo handle?
+                                What types of cargo does Aircargoswift handle?
                             </button>
                         </h2>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -67,7 +67,7 @@
                         </h2>
                         <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Arkargo operates globally with offices and partners across Asia, Europe, the Middle East, Oceania, and North America.
+                                Aircargoswift operates globally with offices and partners across Asia, Europe, the Middle East, Oceania, and North America.
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                         </h2>
                         <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                You can reach us through the <a href="{{ url('contact') }}">Contact Us</a> page or your nearest Arkargo office for immediate assistance.
+                                You can reach us through the <a href="{{ url('contact') }}">Contact Us</a> page or your nearest Aircargoswift office for immediate assistance.
                             </div>
                         </div>
                     </div>

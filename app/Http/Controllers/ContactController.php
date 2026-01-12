@@ -20,7 +20,7 @@ class ContactController extends Controller
     //     ]);
 
     //     // Send email
-    //     Mail::to('support@arkargo.com')->send(new ContactMail($request->all()));
+    //     Mail::to('support@Aircargoswift.com')->send(new ContactMail($request->all()));
 
     //     // Redirect back with success message
     //     return back()->with('success', 'Your message has been sent successfully.');
@@ -40,7 +40,7 @@ class ContactController extends Controller
         $data = $request->all();
 
         // Send email to admin
-        Mail::to('support@arkargo.org')->send(new ContactMail($data));
+        Mail::to('support@aircargoswift.com')->send(new ContactMail($data));
 
         // Send confirmation email to user
         Mail::to($data['email'])->send(new ContactMail($data, true));

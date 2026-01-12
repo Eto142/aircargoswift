@@ -537,7 +537,7 @@
         <div class="sidebar-header">
         
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Arkargo Logo" width="60px">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="Aircargoswift Logo" width="60px">
             </a>
         </div>
 

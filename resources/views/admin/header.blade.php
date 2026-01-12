@@ -18,7 +18,7 @@
             --light: #f8f9fa;
             --dark: #343a40;
             --sidebar-width: 260px;
-            --sidebar-collapsed: 70px;
+            --sidebar-collapsed: 0px;
         }
 
         body {
@@ -26,6 +26,7 @@
             background: #f5f7fb;
             color: #333;
             font-size: 0.95rem;
+            transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* Enhanced Sidebar */
@@ -41,10 +42,60 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1000;
             box-shadow: 3px 0 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            transform: translateX(0);
         }
 
         .sidebar.collapsed {
             width: var(--sidebar-collapsed);
+            transform: translateX(-100%);
+        }
+
+        /* New Toggle Button - Large Square at Top */
+        .sidebar-toggle-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+        }
+
+        .sidebar-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 12px;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(13, 95, 184, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(13, 95, 184, 0.4);
+        }
+
+        .sidebar-toggle:active {
+            transform: scale(0.95);
+        }
+
+        /* Hide toggle when sidebar is collapsed */
+        .sidebar:not(.collapsed) ~ .sidebar-toggle-container {
+            display: none;
+        }
+
+        /* Show toggle button inside sidebar when expanded */
+        .sidebar-toggle-inner {
+            display: block;
+        }
+
+        .sidebar.collapsed .sidebar-toggle-inner {
+            display: none;
         }
 
         .sidebar-header {
@@ -52,30 +103,14 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 12px;
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .sidebar-header h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 0;
-            white-space: nowrap;
-            transition: opacity 0.3s;
-        }
-
-        .sidebar.collapsed .sidebar-header h3 {
-            opacity: 0;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+        .sidebar-header .navbar-brand img {
+            width: 60px;
+            transition: width 0.3s;
         }
 
         .admin-profile {
@@ -99,17 +134,10 @@
             flex-shrink: 0;
         }
 
-        .admin-info {
-            transition: opacity 0.3s;
-        }
-
-        .sidebar.collapsed .admin-info {
-            opacity: 0;
-        }
-
         .admin-info h6 {
             margin: 0;
             font-weight: 600;
+            font-size: 0.95rem;
         }
 
         .admin-info small {
@@ -127,20 +155,22 @@
 
         .nav-link {
             color: rgba(255, 255, 255, 0.85);
-            padding: 12px 15px;
+            padding: 15px 20px;
             border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             text-decoration: none;
             transition: all 0.2s;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .nav-link:hover {
             color: white;
             background: rgba(255, 255, 255, 0.1);
-            transform: translateX(3px);
+            transform: translateX(5px);
+            padding-left: 25px;
         }
 
         .nav-link.active {
@@ -161,18 +191,15 @@
         }
 
         .nav-icon {
-            font-size: 1.2rem;
-            width: 24px;
+            font-size: 1.3rem;
+            width: 30px;
             text-align: center;
             flex-shrink: 0;
         }
 
         .nav-text {
-            transition: opacity 0.3s;
-        }
-
-        .sidebar.collapsed .nav-text {
-            opacity: 0;
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         .sidebar-footer {
@@ -182,42 +209,40 @@
             right: 0;
             padding: 20px 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .toggle-btn {
-            position: absolute;
-            top: 20px;
-            right: -12px;
-            width: 24px;
-            height: 24px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
-            z-index: 1001;
-            border: none;
-            padding: 0;
-        }
-
-        .toggle-btn:hover {
-            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         /* Main Content */
         .main-content {
-            margin-left: calc(var(--sidebar-width) + 20px);
+            margin-left: 0;
             padding: 25px;
-            transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             min-height: 100vh;
+            position: relative;
         }
 
-        .sidebar.collapsed ~ .main-content {
-            margin-left: calc(var(--sidebar-collapsed) + 20px);
+        .sidebar:not(.collapsed) ~ .main-content {
+            margin-left: var(--sidebar-width);
+            padding-left: 45px;
+        }
+
+        /* Overlay for mobile */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar:not(.collapsed) + .sidebar-overlay {
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Header */
@@ -492,16 +517,36 @@
         /* Responsive */
         @media (max-width: 768px) {
             .sidebar {
-                left: -260px;
+                transform: translateX(-100%);
             }
-            .sidebar.collapsed {
-                left: 0;
+            
+            .sidebar:not(.collapsed) {
+                transform: translateX(0);
+                width: 280px;
             }
-            .main-content {
-                margin-left: 20px !important;
+            
+            .sidebar:not(.collapsed) ~ .main-content {
+                margin-left: 0;
             }
+            
+            .sidebar-toggle-container {
+                top: 15px;
+                left: 15px;
+            }
+            
+            .sidebar-toggle {
+                width: 50px;
+                height: 50px;
+            }
+            
             .charts-section {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .sidebar-overlay {
+                display: none !important;
             }
         }
 
@@ -524,21 +569,41 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #a8a8a8;
         }
+
+        /* Sidebar scrollbar */
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
     </style>
 </head>
 <body>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <button class="toggle-btn" onclick="toggleSidebar()">
-            <i class="bi bi-chevron-left"></i>
-        </button>
-        
-        <div class="sidebar-header">
-        
-            <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Aircargoswift Logo" width="60px">
-            </a>
+        <!-- Inner Toggle Button (Visible when sidebar is open) -->
+        <div class="sidebar-toggle-inner">
+            <div class="sidebar-header">
+                <a class="navbar-brand" href="/">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Aircargoswift Logo" width="60px">
+                </a>
+                <button class="sidebar-toggle" onclick="toggleSidebar()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
         </div>
 
         <div class="admin-profile">
@@ -559,35 +624,25 @@
                 </a>
             </div>
 
-
-             <div class="nav-item">
+            <div class="nav-item">
                 <a href="{{ route('admin.book') }}" class="nav-link">
                     <i class="bi bi-box-seam nav-icon"></i>
                     <span class="nav-text">Book Cargo</span>
-                    {{-- <span class="badge bg-danger ms-auto">5</span> --}}
                 </a>
             </div>
-
 
             <div class="nav-item">
                 <a href="{{ route('admin.shipments') }}" class="nav-link">
                     <i class="bi bi-box-seam nav-icon"></i>
-                    <span class="nav-text">Shipments</span>
-                    {{-- <span class="badge bg-danger ms-auto">5</span> --}}
+                    <span class="nav-text"> View Shipments</span>
                 </a>
             </div>
             <div class="nav-item">
                 <a href="{{ route('admin.send.email') }}" class="nav-link">
-                    <i class="bi bi-people nav-icon"></i>
+                    <i class="bi bi-envelope nav-icon"></i>
                     <span class="nav-text">Send Email</span>
                 </a>
             </div>
-            {{-- <div class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="bi bi-bar-chart nav-icon"></i>
-                    <span class="nav-text">Analytics</span>
-                </a>
-            </div> --}}
             <div class="nav-item">
                 <a href="{{ route('admin.change.password') }}" class="nav-link">
                     <i class="bi bi-gear nav-icon"></i>
@@ -606,3 +661,115 @@
             </form>
         </div>
     </div>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Toggle Button Container (Fixed at top left) -->
+    <div class="sidebar-toggle-container">
+        <button class="sidebar-toggle" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+
+ 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle sidebar function
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.querySelector('.main-content');
+        const overlay = document.querySelector('.sidebar-overlay');
+        
+        sidebar.classList.toggle('collapsed');
+        
+        // Close sidebar on mobile when clicking overlay
+        if (window.innerWidth < 768 && overlay) {
+            if (!sidebar.classList.contains('collapsed')) {
+                overlay.style.opacity = '1';
+                overlay.style.visibility = 'visible';
+            } else {
+                overlay.style.opacity = '0';
+                overlay.style.visibility = 'hidden';
+            }
+        }
+    }
+    
+    // Make function globally available
+    window.toggleSidebar = toggleSidebar;
+    
+    // Add click animation to toggle button
+    const toggleBtns = document.querySelectorAll('.sidebar-toggle');
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            // Add click effect
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+    
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        const sidebar = document.getElementById('sidebar');
+        const toggleContainer = document.querySelector('.sidebar-toggle-container');
+        
+        if (window.innerWidth < 768 && 
+            !sidebar.contains(e.target) && 
+            !toggleContainer.contains(e.target) &&
+            !sidebar.classList.contains('collapsed')) {
+            toggleSidebar();
+        }
+    });
+    
+    // Handle responsive behavior
+    function handleResponsiveSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.querySelector('.sidebar-overlay');
+        
+        if (window.innerWidth < 768) {
+            // Mobile: Start with collapsed sidebar
+            sidebar.classList.add('collapsed');
+            if (overlay) {
+                overlay.style.opacity = '0';
+                overlay.style.visibility = 'hidden';
+            }
+        } else {
+            // Desktop: Show sidebar by default
+            sidebar.classList.remove('collapsed');
+        }
+    }
+    
+    // Initial check
+    handleResponsiveSidebar();
+    
+    // Check on resize
+    window.addEventListener('resize', handleResponsiveSidebar);
+    
+    // Add keyboard shortcut (Esc) to close sidebar
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const sidebar = document.getElementById('sidebar');
+            if (window.innerWidth < 768 && !sidebar.classList.contains('collapsed')) {
+                toggleSidebar();
+            }
+        }
+    });
+    
+    // Add smooth transitions
+    const style = document.createElement('style');
+    style.textContent = `
+        * {
+            transition-property: transform, opacity, visibility, margin-left, width !important;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+            transition-duration: 300ms !important;
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
+</body>
+</html>

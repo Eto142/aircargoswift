@@ -136,14 +136,14 @@
                         <p class="text-muted mb-1">Declared (Carriage)</p>
                         <h6>{{ $shipment->declared_carriage }} {{ $shipment->currency }}</h6>
                     </div>
-                    <div class="col-md-4">
+                    {{-- <div class="col-md-4">
                         <p class="text-muted mb-1">Declared (Customs)</p>
                         <h6>{{ $shipment->declared_customs }} {{ $shipment->currency }}</h6>
                     </div>
                     <div class="col-md-4">
                         <p class="text-muted mb-1">Insurance</p>
                         <h6>{{ $shipment->insurance_amount ?? 'N/A' }}</h6>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

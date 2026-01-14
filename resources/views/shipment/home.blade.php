@@ -1244,11 +1244,11 @@
                         <div class="info-section">
                             <div class="info-label">Declared Values</div>
                             <div class="info-value">Carriage: {{ $shipment->currency }} {{ number_format($shipment->declared_carriage, 2) }}</div>
-                            <div class="info-value">Customs: {{ $shipment->currency }} {{ number_format($shipment->declared_customs, 2) }}</div>
+                            {{-- <div class="info-value">Customs: {{ $shipment->currency }} {{ number_format($shipment->declared_customs, 2) }}</div>
                             @if($shipment->insurance_amount)
                             <div class="info-value">Insurance: {{ $shipment->currency }} {{ number_format($shipment->insurance_amount, 2) }}</div>
                             @endif
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 

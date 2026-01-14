@@ -70,10 +70,10 @@
                     <input type="number" name="declared_carriage" class="form-control">
                 </div>
 
-                <div class="col-md-3">
+                {{-- <div class="col-md-3">
                     <label class="form-label">Declared Value (Customs)</label>
                     <input type="number" name="declared_customs" class="form-control">
-                </div>
+                </div> --}}
 
                 <div class="col-md-3">
                     <label class="form-label">Currency</label>
@@ -236,10 +236,10 @@
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                {{-- <div class="col-md-3">
                     <label class="form-label">Insurance Amount</label>
                     <input name="insurance_amount" type="number" class="form-control">
-                </div>
+                </div> --}}
 
                 <div class="col-md-3">
                     <button class="btn btn-primary w-100">

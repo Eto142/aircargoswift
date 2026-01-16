@@ -97,7 +97,7 @@
                     <label class="form-label">Company Name</label>
                     <input name="shipper_company" class="form-control" required>
                 </div>
-
+{{-- 
                 <div class="col-md-4">
                     <label class="form-label">Department</label>
                     <input name="shipper_department" class="form-control">
@@ -106,7 +106,7 @@
                 <div class="col-md-4">
                     <label class="form-label">Contact Person</label>
                     <input name="shipper_contact" class="form-control" required>
-                </div>
+                </div> --}}
 
                 <div class="col-md-4">
                     <label class="form-label">Address</label>
@@ -187,10 +187,10 @@
                     <input name="gross_weight" type="number" class="form-control" required>
                 </div>
 
-                <div class="col-md-2">
+                {{-- <div class="col-md-2">
                     <label class="form-label">Chargeable Weight</label>
                     <input name="chargeable_weight" type="number" class="form-control" required>
-                </div>
+                </div> --}}
 
                 <div class="col-md-4">
                     <label class="form-label">Nature of Goods</label>
@@ -215,7 +215,7 @@
 
 
         <!-- ================= PAYMENT ================= -->
-        <div class="stat-card">
+        {{-- <div class="stat-card">
             <h5 class="section-title">Payment & Insurance</h5>
 
             <div class="row g-3 align-items-end">
@@ -234,7 +234,7 @@
                         <option>Consignee</option>
                         <option>Importer</option>
                     </select>
-                </div>
+                </div> --}}
 
                 {{-- <div class="col-md-3">
                     <label class="form-label">Insurance Amount</label>

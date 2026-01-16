@@ -114,7 +114,7 @@
                            value="{{ old('shipper_company', $shipment->shipper_company) }}" >
                 </div>
 
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <label class="form-label">Shipper Department</label>
                     <input name="shipper_department" class="form-control"
                            value="{{ old('shipper_department', $shipment->shipper_department) }}">
@@ -130,7 +130,7 @@
                     <label class="form-label">Address</label>
                     <input name="shipper_address" class="form-control"
                            value="{{ old('shipper_address', $shipment->shipper_address) }}" >
-                </div>
+                </div> --}}
 
                 <div class="col-md-2">
                     <label class="form-label">City</label>
@@ -218,11 +218,11 @@
                            value="{{ old('gross_weight', $shipment->gross_weight) }}" >
                 </div>
 
-                <div class="col-md-2">
+                {{-- <div class="col-md-2">
                     <label class="form-label">Chargeable Weight</label>
                     <input name="chargeable_weight" type="number" class="form-control"
                            value="{{ old('chargeable_weight', $shipment->chargeable_weight) }}" >
-                </div>
+                </div> --}}
 
                 <div class="col-md-4">
                     <label class="form-label">Nature of Goods</label>
@@ -233,7 +233,7 @@
         </div>
 
         <!-- ================= PAYMENT ================= -->
-        <div class="stat-card">
+        {{-- <div class="stat-card">
             <h5 class="section-title">Payment & Insurance</h5>
 
             <div class="row g-3 align-items-end">
@@ -265,7 +265,7 @@
                     <label class="form-label">Insurance Amount</label>
                     <input name="insurance_amount" type="number" class="form-control"
                            value="{{ old('insurance_amount', $shipment->insurance_amount) }}">
-                </div>
+                </div> --}}
 
                 <div class="col-md-3 d-flex gap-2">
                     <button class="btn btn-success w-100">Update Shipment</button>

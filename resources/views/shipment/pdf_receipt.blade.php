@@ -42,7 +42,7 @@
         <tr><th>Currency</th><td>{{ $shipment->currency }}</td></tr>
         <tr><th>Pieces</th><td>{{ $shipment->pieces }}</td></tr>
         <tr><th>Gross Weight</th><td>{{ $shipment->gross_weight }}</td></tr>
-        <tr><th>Chargeable Weight</th><td>{{ $shipment->chargeable_weight }}</td></tr>
+        {{-- <tr><th>Chargeable Weight</th><td>{{ $shipment->chargeable_weight }}</td></tr> --}}
         <tr><th>Goods Description</th><td>{{ $shipment->goods_description }}</td></tr>
         <tr><th>Status</th><td>{{ $shipment->status ?? 'Pending' }}</td></tr>
     </table>
@@ -52,8 +52,8 @@
     <h4>Shipper Details</h4>
     <table>
         <tr><th>Company</th><td>{{ $shipment->shipper_company }}</td></tr>
-        <tr><th>Department</th><td>{{ $shipment->shipper_department ?? 'N/A' }}</td></tr>
-        <tr><th>Contact</th><td>{{ $shipment->shipper_contact }}</td></tr>
+        {{-- <tr><th>Department</th><td>{{ $shipment->shipper_department ?? 'N/A' }}</td></tr>
+        <tr><th>Contact</th><td>{{ $shipment->shipper_contact }}</td></tr> --}}
         <tr><th>Address</th><td>{{ $shipment->shipper_address }}</td></tr>
         <tr><th>City</th><td>{{ $shipment->shipper_city }}</td></tr>
         <tr><th>Country</th><td>{{ $shipment->shipper_country }}</td></tr>
@@ -74,14 +74,14 @@
     </table>
 </div>
 
-<div class="section">
+{{-- <div class="section">
     <h4>Charges & Insurance</h4>
     <table>
         <tr><th>Transport Charges</th><td>{{ $shipment->transport_charges }}</td></tr>
         <tr><th>Duties & Taxes</th><td>{{ $shipment->duties_taxes }}</td></tr>
         <tr><th>Insurance Amount</th><td>{{ $shipment->insurance_amount ?? 'N/A' }}</td></tr>
     </table>
-</div>
+</div> --}}
 
 <div class="footer">
     <p>Please keep this receipt for your records. Track your shipment online using the AWB number.</p>

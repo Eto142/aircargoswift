@@ -1151,10 +1151,10 @@
                 <div class="metric-value">{{ $shipment->gross_weight }} KG</div>
                 <div class="metric-label">GROSS WEIGHT</div>
             </div>
-            <div class="metric-card" style="--i: 2;">
+            {{-- <div class="metric-card" style="--i: 2;">
                 <div class="metric-value">{{ $shipment->chargeable_weight }} KG</div>
                 <div class="metric-label">CHARGEABLE WEIGHT</div>
-            </div>
+            </div> --}}
             <div class="metric-card" style="--i: 3;">
                 <div class="metric-value">{{ $shipment->currency }} {{ number_format($shipment->declared_carriage, 2) }}</div>
                 <div class="metric-label">DECLARED VALUE</div>
@@ -1200,11 +1200,11 @@
                                 <span class="field-label">Phone:</span> {{ $shipment->shipper_phone }}
                             </div>
                             @endif
-                            @if($shipment->shipper_department)
+                            {{-- @if($shipment->shipper_department)
                             <div class="info-value">
                                 <span class="field-label">Department:</span> {{ $shipment->shipper_department }}
                             </div>
-                            @endif
+                            @endif --}}
                         </div>
 
                         <!-- Receiver -->
@@ -1213,9 +1213,9 @@
                             <div class="info-value strong">
                                 <span class="field-label">Company:</span> {{ $shipment->receiver_company }}
                             </div>
-                            <div class="info-value">
+                            {{-- <div class="info-value">
                                 <span class="field-label">Contact Person:</span> {{ $shipment->receiver_contact }}
-                            </div>
+                            </div> --}}
                             <div class="info-value">
                                 <span class="field-label">Address:</span> {{ $shipment->receiver_address }}
                             </div>

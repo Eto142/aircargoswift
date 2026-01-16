@@ -33,8 +33,8 @@ public function store(Request $request)
         'currency' => 'required|string',
 
         'shipper_company' => 'required|string',
-        'shipper_department' => 'nullable|string',
-        'shipper_contact' => 'required|string',
+        // 'shipper_department' => 'nullable|string',
+        // 'shipper_contact' => 'required|string',
         'shipper_address' => 'required|string',
         'shipper_city' => 'required|string',
         'shipper_country' => 'required|string',
@@ -50,11 +50,11 @@ public function store(Request $request)
 
         'pieces' => 'required|integer|min:1',
         'gross_weight' => 'required|numeric',
-        'chargeable_weight' => 'required|numeric',
+        // 'chargeable_weight' => 'required|numeric',
         'goods_description' => 'required|string',
 
-        'transport_charges' => 'required|string',
-        'duties_taxes' => 'required|string',
+        // 'transport_charges' => 'required|string',
+        // 'duties_taxes' => 'required|string',
         'insurance_amount' => 'nullable|numeric',
     ]);
 

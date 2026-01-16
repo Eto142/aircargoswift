@@ -1186,9 +1186,9 @@
                             <div class="info-value strong">
                                 <span class="field-label">Company:</span> {{ $shipment->shipper_company }}
                             </div>
-                            <div class="info-value">
+                            {{-- <div class="info-value">
                                 <span class="field-label">Contact Person:</span> {{ $shipment->shipper_contact }}
-                            </div>
+                            </div> --}}
                             <div class="info-value">
                                 <span class="field-label">Address:</span> {{ $shipment->shipper_address }}
                             </div>
@@ -1213,9 +1213,9 @@
                             <div class="info-value strong">
                                 <span class="field-label">Company:</span> {{ $shipment->receiver_company }}
                             </div>
-                            {{-- <div class="info-value">
+                            <div class="info-value">
                                 <span class="field-label">Contact Person:</span> {{ $shipment->receiver_contact }}
-                            </div> --}}
+                            </div>
                             <div class="info-value">
                                 <span class="field-label">Address:</span> {{ $shipment->receiver_address }}
                             </div>

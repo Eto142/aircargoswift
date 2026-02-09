@@ -50,7 +50,7 @@ class AuthController extends Controller
             'new_password' => 'required|min:8|confirmed',
         ]);
 
-        $admin = Auth::user();
+        $admin = Auth::guard('admin')->user();
 
         if (!Hash::check($request->current_password, $admin->password)) {
             return back()->with('error', 'Current password is incorrect');
